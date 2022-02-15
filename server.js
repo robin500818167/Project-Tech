@@ -1,20 +1,31 @@
 
 const express = require("express");
-const server = express();
+const app = express();
+const hbs = require('express-hbs');
 const port = 1337;
 
-server.use('/static', express.static('public'));
+app.set('view engine', 'hbs');
 
-server.get("/", (req, res) => {
-  res.end("Hello World");
+// Use `.hbs` for extensions and find partials in `views/partials`.
+app.engine('hbs', hbs.express4({
+  partialsDir: __dirname + '/views/partials'
+}));
+app.set('view engine', 'hbs');
+app.set('views', __dirname + '/views');
+
+app.use('/static', express.static('public'));
+
+app.get("/", (req, res) => {
+  res.render('main', {layout : 'index'});
 });
-server.get("/about", (req, res) => {
+app.get("/about", (req, res) => {
   res.end("About me");
 });
-server.get("*", (req, res) => {
+// * moet onderaan blijven van de routes
+app.get("*", (req, res) => {
   res.end("404 Error - Page not found");
 });
 
-server.listen(port, () => {
-  console.log("Server is running on port 1337");
+app.listen(port, () => {
+  console.log("app is running on port 1337");
 });
