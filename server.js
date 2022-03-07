@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const hbs = require('express-hbs');
-const port = 1337;
+const port = process.env.PORT || 1337;
 
 // moet bovenaan blijven staan
 app.use('/static', express.static('static'));
