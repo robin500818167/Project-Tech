@@ -4,7 +4,7 @@ const hbs = require('express-hbs');
 const port = process.env.PORT || 1337;
 
 // moet bovenaan blijven staan
-app.use('/static', express.static('static'));
+app.use('/static', express.static(path.join(__dirname, 'static')));
 
 app.engine('hbs', hbs.express4({
   partialsDir: __dirname + '/views/partials'
