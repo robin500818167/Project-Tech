@@ -1,0 +1,71 @@
+* {
+	font-family: "Raleway";
+}
+body {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	overflow-y: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #dde5f4;
+	height: 100vh;
+	
+}
+.screen-1, .screen-2 {
+	background: #f1f7fe;
+	padding: 2em;
+	display: flex;
+	flex-direction: column;
+	border-radius: 30px;
+	box-shadow: 0 0 2em #e6e9f9;
+	gap: 2em;
+}
+.screen-2 {
+	width: 75%;
+}
+.screen-1 .email { 
+	margin-bottom: 60px;
+}
+.screen-2 .name, .screen-2 .email { 
+	margin-bottom: 30px;
+}
+.screen-2 .email-1 {
+	margin-bottom: 0px;;
+}
+.screen-1 .password, {
+	margin-bottom: 10px;
+}
+.screen-1 .email, .screen-1 .password, .screen-1 .name, .screen-2 .email,  .screen-2 .email-1, .screen-2 .password, .screen-2 .name {
+	background: white;
+	box-shadow: 0 0 2em #e6e9f9;
+	padding: 1em;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5em;
+	border-radius: 20px;
+	color: #4d4d4d;
+	margin-top: -3em;
+}
+.screen-1 .email input, .screen-1 .password input, .screen-1 .name input, .screen-2 .email input,  .screen-2 .email-1 input, .screen-2 .password input, .screen-2 .name input  {
+	outline: none;
+	border: none;
+}
+.screen-1 .login, .screen-2 .login  {
+	padding: 1em;
+	background: #3e4684;
+	color: white;
+	border: none;
+	border-radius: 30px;
+	font-weight: 600;
+	width: 100%;
+}
+.screen-1 .footer, .screen-2 .footer  {
+	display: flex;
+	font-size: 0.7em;
+	color: #5e5e5e;
+	gap: 8em;
+
+}
