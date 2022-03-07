@@ -32,6 +32,4 @@ app.get("*", (req, res) => {
   res.end("404 Error - Page not found");
 });
 
-app.listen(port, () => {
-  console.log("app is running on port 1337");
-});
+app.listen(port);
