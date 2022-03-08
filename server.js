@@ -3,6 +3,8 @@ const path = require('path');
 const app = express();
 const hbs = require('express-hbs');
 const port = process.env.PORT || 1337;
+require('dotenv').config();
+const connectDB = require('./config/db');
 
 // moet bovenaan blijven staan
 app.use('/static', express.static(path.join(__dirname, 'static')));
