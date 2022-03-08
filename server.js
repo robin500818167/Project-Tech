@@ -5,6 +5,7 @@ const hbs = require('express-hbs');
 const port = process.env.PORT || 1337;
 require('dotenv').config();
 const connectDB = require('./config/db');
+const User = require('./modals/User');
 
 // moet bovenaan blijven staan
 app.use('/static', express.static(path.join(__dirname, 'static')));
