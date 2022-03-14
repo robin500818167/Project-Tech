@@ -3,7 +3,7 @@ const path = require('path');
 const app = express();
 const hbs = require('express-hbs');
 const port = process.env.PORT || 1337;
-require('dotenv').config();
+const dotenv = require('dotenv').config();
 const connectDB = require('./config/db');
 const User = require('./modals/User');
 
@@ -13,7 +13,13 @@ connectDB();
 app.use('/static', express.static(path.join(__dirname, 'static')));
 
 app.engine('hbs', hbs.express4({
-  //partialsDir: __dirname + '/views'
+  extname: 'hbs', 
+  defaultLayout: 'index', 
+  layoutsDir: path.join(__dirname, 'views/layouts'),
+  partialsDir  : [
+      //  path to  partials
+      path.join(__dirname, 'views/partials'),
+  ]
 }));
 app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
@@ -26,7 +32,9 @@ app.get("/inlog", (req, res) => {
 });
 app.post("/inlog", (req, res) => {
   const newUser = new User ({
-    name: "Test"
+    name: "Test",
+    email: "robinnikita@hotmail.com",
+    password: "Test123"
   });
   newUser.save();
   res.render('main', {layout : 'index'});

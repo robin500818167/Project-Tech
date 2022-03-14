@@ -1,21 +1,18 @@
 const mongoose = require('mongoose');
 
 const  user = new mongoose.Schema ({
-    indentifier: {
-        type: Number,
-        required: true
-    },
+  
     name: {
         type: String,
-        required: true
+        required: [true, 'name is required']
     },
     email: {
         type: String,
-        required: true
+        required: [true, 'email is required']
     },
-    level: {
-        type: Array,
-        required: true
+    password: {
+        type: String,
+        required: [true, 'password is required']
     }
 })
 
