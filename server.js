@@ -27,12 +27,12 @@ app.get("/", (req, res) => {
   res.render('main', {layout : 'index'});
 });
 app.get("/inlog", (req, res) => {
-  res.render('inlog', {layout : 'index'}, {
+  res.render('inlog', {layout : 'index'} /*, {
     title: 'Login',
     name: '',
     email: '',
     password: '' 
-  })
+  }*/)
 });
 
   
@@ -40,12 +40,12 @@ app.get("/forgotpassword", (req, res) => {
   res.render('forgotPassword', {layout : 'index'});
 });
 app.get("/signup", (req, res) => {
-  res.render('signUp',  {layout : 'index'}, {
+  res.render('signUp',  {layout : 'index'} /*, {
     title: 'Registration Page',
     name: '',
     email: '',
     password: ''    
-    });
+    }*/);
 });
 app.post("/signup", (req, res) => {
   console.log(req.body);

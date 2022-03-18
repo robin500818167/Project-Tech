@@ -1,33 +1,36 @@
 * {
 	font-family: "Raleway";
 }
+:root {
+	--main-bg-color: #dde5f4;
+	--section-bg-color: #f1f7fe;
+	--section-shadow-color: #e6e9f9;
+	--label-color: #5e5e5e;
+	--button-bg-color: #3e4684;
+	--white: #fff;
+  }
 body {
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
 	user-select: none;
 	overflow-y: hidden;
 	display: flex;
 	justify-content: center;
+	flex-direction: column;
 	align-items: center;
-	background: #dde5f4;
+	background: var(--main-bg-color);
 	height: 100vh;
 	
 }
 .screen-1, .screen-2 {
-	background: #f1f7fe;
+	background: var(--section-bg-color);
 	padding: 2em;
 	display: flex;
 	flex-direction: column;
 	border-radius: 30px;
-	box-shadow: 0 0 2em #e6e9f9;
+	box-shadow: 0 0 2em var(--section-shadow-color);
 	gap: 2em;
 }
 .screen-2 {
 	width: 75%;
-}
-.screen-1 .email { 
-	margin-bottom: 60px;
 }
 .screen-2 .name, .screen-2 .email { 
 	margin-bottom: 30px;
@@ -35,19 +38,18 @@ body {
 .screen-2 .email-1 {
 	margin-bottom: 0px;;
 }
-.screen-1 .password, {
+.screen-1 .password {
 	margin-bottom: 10px;
 }
 .screen-1 .email, .screen-1 .password, .screen-1 .name, .screen-2 .email,  .screen-2 .email-1, .screen-2 .password, .screen-2 .name {
-	background: white;
-	box-shadow: 0 0 2em #e6e9f9;
+	background: var(--white);
+	box-shadow: 0 0 2em var(--section-shadow-color);
 	padding: 1em;
 	display: flex;
 	flex-direction: column;
 	gap: 0.5em;
 	border-radius: 20px;
-	color: #4d4d4d;
-	margin-top: -3em;
+	color: var(--label-color);
 }
 .screen-1 .email input, .screen-1 .password input, .screen-1 .name input, .screen-2 .email input,  .screen-2 .email-1 input, .screen-2 .password input, .screen-2 .name input  {
 	outline: none;
@@ -55,8 +57,8 @@ body {
 }
 .screen-1 .login, .screen-2 .login  {
 	padding: 1em;
-	background: #3e4684;
-	color: white;
+	background: var(--button-bg-color);
+	color: var(--white);
 	border: none;
 	border-radius: 30px;
 	font-weight: 600;
@@ -65,7 +67,12 @@ body {
 .screen-1 .footer, .screen-2 .footer  {
 	display: flex;
 	font-size: 0.7em;
-	color: #5e5e5e;
+	color: var(--label-color);
 	gap: 8em;
-
+}
+.login {
+	margin-top: 20px;
+}
+footer {
+	margin-top: 10px;
 }
