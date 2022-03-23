@@ -23,16 +23,29 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.set('view engine', '.hbs');
 app.set('views',path.join(__dirname,'views'))
 
+async function getUser(email, password) {
+  try {
+    const theUser = await User.find({"email": 'email'}).lean() 
+    if (user) {
+      if (password == user.password) {
+        return user
+      } else {
+        return 'user was not found'
+      }
+    }
+  } catch (error) {
+    throw new Error(error)
+  }
+}
+
 app.get("/", (req, res) => {
+ 
   res.render('main', {layout : 'index'});
 });
 app.get("/inlog", (req, res) => {
-  res.render('inlog', {layout : 'index'} /*, {
-    title: 'Login',
-    name: '',
-    email: '',
-    password: '' 
-  }*/)
+  const dataObject = await getUser(req.body.email, req.body.password)
+  res.json(dataObject)
+  res.render('inlog', {layout : 'index'} )
 });
 
   

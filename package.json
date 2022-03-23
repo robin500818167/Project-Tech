@@ -33,6 +33,9 @@
   },
   "homepage": "https://github.com/robin500818167/Project-Tech#readme",
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.16.0",
+    "@typescript-eslint/parser": "^5.16.0",
+    "eslint": "^8.11.0",
     "nodemon": "^2.0.15"
   }
 }
