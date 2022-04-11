@@ -5,6 +5,9 @@ Gymbuddy is een matching applicatie bedacht om mensen die van sporten houden sam
 ## Feature 💡
 Voor deze app bouw ik het registreren en het inloggen. Dit deel is individueel. Hierna worden er groepjes gevormt om allerlei features bij elkaar te bregen en van de applicatie een geheel te maken. 
 
+### Herkansing
+Ik ben geswitched van login enz. naar het maken van een chatfunctionaliteit.
+
 ## Installation 🛠
 Voor installatie heb je [NPM](https://github.com/nvm-sh/nvm) en [GIT](https://github.com/git-guides/install-git) nodig.   
 
