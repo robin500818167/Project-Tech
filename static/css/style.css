@@ -1,14 +1,134 @@
-* {
-	font-family: "Raleway";
-}
+/* Variabls */
 :root {
+
 	--main-bg-color: #dde5f4;
 	--section-bg-color: #f1f7fe;
 	--section-shadow-color: #e6e9f9;
 	--label-color: #5e5e5e;
 	--button-bg-color: #3e4684;
 	--white: #fff;
-  }
+}
+
+/* Resets */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	
+	font-family: "Raleway";
+	color: var(--primary-text);
+}
+
+/* Helper Classes */
+
+.flex {
+	display: flex;
+}
+
+.flex-grow-1 {
+	flex-grow: 1;
+}
+
+.primary-text {
+	color: var(--primary-text);
+}
+
+.secondary-text {
+	color: var(--secondary-text);
+}
+
+.hidden {
+	display: none;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.mb-2 {
+	margin-bottom: 20px;
+}
+
+h1 {
+	font-size: 48px;
+	font-weight: 300;
+}
+
+#appContainer {
+	height: 100vh;
+	width: 100vw;
+	align-items: stretch;
+	background-color: var(--main-bg-color);
+	overflow: hidden;
+}
+
+/* Login */
+
+#login {
+	padding: 40px 100px;
+}
+
+#loginForm {
+	margin-top: 20px;
+}
+
+
+/* Chat */
+
+#chat {
+	background: white;
+	height: 35em;
+	width: 25em;
+	padding: 25px 25px;
+	overflow-y: scroll;
+}
+
+#messageForm {
+	margin-bottom: 25px;
+	position: fixed;
+	bottom: 12.5em;
+	width: 22em;
+	background-color:var(--white) ;
+	padding: 1em;
+}
+#messageInput {
+	height: 3em;
+}
+
+#messageForm .login {
+	margin: 0em 0em 0em 1em;
+	width: 25%;
+}
+#loginForm .login {
+	margin: 0em 0em 0em 1em;
+}
+
+.message {
+	background-color: var(--main-bg-color);
+	padding: 20px;
+	width: 80%;
+	margin-bottom: 20px;
+}
+
+.message-right {
+	background: var(--section-bg-color);
+	margin-left: 20%;
+}
+
+.message-right {
+	color: var(--primary-text);
+}
+
+.message-details {
+	margin-bottom: 5px;
+}
+
+.message-author {
+	font-weight: 800;
+}
 body {
 	user-select: none;
 	overflow-y: hidden;
@@ -76,3 +196,5 @@ body {
 footer {
 	margin-top: 10px;
 }
+
+

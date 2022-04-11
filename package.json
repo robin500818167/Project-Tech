@@ -12,7 +12,8 @@
     "mongoose": "^6.2.5",
     "passport": "^0.5.2",
     "passport-local": "^1.0.0",
-    "passport-local-mongoose": "^7.0.0"
+    "passport-local-mongoose": "^7.0.0",
+    "socket.io": "^4.4.1"
   },
   "name": "project-tech",
   "description": "test",
@@ -35,7 +36,6 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.16.0",
     "@typescript-eslint/parser": "^5.16.0",
-    "eslint": "^8.11.0",
     "nodemon": "^2.0.15",
     "prettier": "2.6.0"
   }
