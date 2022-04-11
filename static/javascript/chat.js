@@ -39,7 +39,7 @@ if (message.type === messageTypes.LOGIN) {
   return `
       <p class="secondary-text mb-2">${
           message.author
-      } joined the chat...</p>
+      } deelt mee aan de chat...</p>
   `;
 }
 return `
@@ -81,7 +81,7 @@ messageInput.value = '';
 loginBtn.addEventListener('click', e => {
 e.preventDefault();
 if (!nameInput.value) {
-  return console.log('Must supply a name');
+  return console.log('Je moet een naam invullen');
 }
 
 //set the name and create logged in message
